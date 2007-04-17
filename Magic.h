@@ -17,7 +17,7 @@
 #define ALLDICTIONARY [NSDictionary dictionaryWithObjectsAndKeys:MENUITEMALL, MENUOBJECT, NSLocalizedString(@"All Contacts", @"All Contacts"), MENUNAME, nil]
 
 @interface Magic : NSObject {
-	NSString * infoText;
+	NSAttributedString * infoText2;
 	NSArray * groups;
 	BOOL running;
 	BOOL mailIsRunningCache;
@@ -25,6 +25,7 @@
 	NSArray * sortCriteria;
 	NSDictionary * mailboxUserInfo;
 	NSUserDefaultsController * UDC;
+	NSDictionary * myStringAttributes;
 }
 - (id) init;
 - (void) buildGroupList;

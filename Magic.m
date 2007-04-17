@@ -16,6 +16,8 @@
 - (id) init {
 	[super init];
 	[self buildGroupList];
+	
+	// handle defaults
 	UDC = [NSUserDefaultsController sharedUserDefaultsController];
 	[self setValue: [NSArray arrayWithObjects: 
 		[NSDictionary dictionaryWithObjectsAndKeys:	
@@ -65,6 +67,17 @@
 			firstNameFirst = ([myNum intValue] == 0);
 		}
 	}	
+	
+	// setup paragraph style for info text
+	
+	NSFont *stringFont = [NSFont fontWithName:@"Lucida Grande" size:11.0];
+	NSMutableParagraphStyle * myParagraphStyle = [[[NSParagraphStyle defaultParagraphStyle] mutableCopy] autorelease];
+	[myParagraphStyle setHeadIndent:20.0];
+	[myParagraphStyle setFirstLineHeadIndent:0.0];
+	NSTextTab * myTab = [[[NSTextTab alloc] initWithType:NSLeftTabStopType location:11.0] autorelease];
+	[myParagraphStyle setTabStops:[NSArray arrayWithObject: myTab]];
+	NSDictionary * theStringAttributes = [NSDictionary dictionaryWithObjectsAndKeys:stringFont, NSFontAttributeName, myParagraphStyle, NSParagraphStyleAttributeName, nil];
+	[self setValue:theStringAttributes  forKey:@"myStringAttributes"];
 	
 	[self updateInfoText];
 	
@@ -316,7 +329,7 @@
 
 
 - (NSString*) updateInfoText {
-	NSString * tempText = NSLocalizedString(@"Info Text. Command name: %@, Smart Mailbox name: %@, AddressBook Group name: %@, CCstatus: %@", @"Info text at the bottom of the window, three strings are inserted. The Address Book group name can also be the complete address book.");
+	NSString * tempText = NSLocalizedString(@"Info Text. Command name: %@, Smart Mailbox name: %@, AddressBook Group name: %@, CCstatus: %@, Quitting Mail: %@ , Restarting Mail:%@", @"Info text at the bottom of the window, six strings are inserted. The Address Book group name can also be the complete address book.");
 
 	NSDictionary * theSelection = [UDC valueForKeyPath:@"values.selectedGroup"];
 	NSString * selectedGroup = (NSString*) [theSelection objectForKey:MENUOBJECT];
@@ -330,25 +343,38 @@
 		groupName = [NSString stringWithFormat:NSLocalizedString(@"the group '%@' of your address book", @"the group '%@' of your address book"), groupName];
 	}
 	
-	NSString * ccInfo;
+	NSString * ccInfo = NSLocalizedString(@"sender or recipient", @"sender or recipient");
+	/* Mail can't actually do this...
 	if ([[UDC valueForKeyPath:@"values.includeCCs"] boolValue]) {
 		ccInfo = NSLocalizedString(@"sender, recipient or carbon copy recipient", @"sender, recipient or carbon copy recipient");		
 	}
 	else {
-		ccInfo = NSLocalizedString(@"sender or recipient", @"sender or recipient");				
+		ccInfo = ;				
 	}
+	*/
 	
+	NSString * mailtext1 = @"";
+	NSString * mailtext2 = @"";
+	if ([self mailIsRunning]) {
+	//	tempText = [tempText stringByAppendingFormat:@"\n%@", NSLocalizedString(@"Mail will be quit and re-launched.", @"Mail will be quit and re-launched.")];
+		mailtext1 = NSLocalizedString(@". Quit Mail" , @"bullet point that Mail will be quit");
+		mailtext2 = NSLocalizedString(@". Relaunch Mail", @"bullet point that Mail will be relaunched");
+	}
+			
 	tempText = [NSString stringWithFormat:tempText, 
 		NSLocalizedString(@"Create Smart Mailboxes", @"Create Smart Mailboxes"),
 		[UDC valueForKeyPath:@"values.folderName"],
 		groupName,
-		ccInfo];
+		ccInfo,
+		mailtext1,
+		mailtext2];
+
+	NSAttributedString *displayString = [[[NSAttributedString alloc] 
+							initWithString:tempText
+						        attributes:myStringAttributes] autorelease];
 	
-	if ([self mailIsRunning]) {
-		tempText = [tempText stringByAppendingFormat:@"\n%@", NSLocalizedString(@"Mail will be quit and re-launched.", @"Mail will be quit and re-launched.")];
-	}
-			
-	[self setValue:tempText forKey:@"infoText"];
+	
+	[self setValue:displayString forKey:@"infoText2"];
 	return tempText;
 	
 	// @"The “%@” command will replace your settings for Mail's smart mailboxes by adding or replacing the Smart Mailbox folder “%@” which contains a Smart Mailbox for each contact in @%@”. These Smart Mailboxes will contain all messages in which any of the contact's e-mail addresses occurs as a %@.	%@"
@@ -470,7 +496,6 @@
 		   [VersionChecker checkVersionForURLString:@"http://www.earthlingsoft.net/Mailboxer/Mailboxer.xml" silent:NO];
     }
 }
-
 
 
 @end
