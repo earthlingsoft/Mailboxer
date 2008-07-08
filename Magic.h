@@ -24,7 +24,6 @@
 	BOOL firstNameFirst;
 	NSArray * sortCriteria;
 	NSDictionary * mailboxUserInfo;
-	NSUserDefaultsController * UDC;
 	NSDictionary * myStringAttributes;
 }
 - (id) init;

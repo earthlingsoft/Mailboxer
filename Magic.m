@@ -8,7 +8,7 @@
 //
 
 #import "Magic.h"
-
+#define UDC [NSUserDefaultsController sharedUserDefaultsController]
 
 @implementation Magic
 
@@ -18,7 +18,6 @@
 	[self buildGroupList];
 	
 	// handle defaults
-	UDC = [NSUserDefaultsController sharedUserDefaultsController];
 	[self setValue: [NSArray arrayWithObjects: 
 		[NSDictionary dictionaryWithObjectsAndKeys:	
 			NSLocalizedString(@"Date Received", @"Date Received"), MENUNAME,
@@ -90,6 +89,20 @@
 }
 
 
+
+- (void) dealloc {
+	[infoText2 release];
+	[groups release];
+	[sortCriteria release];
+	[mailboxUserInfo release];
+	[myStringAttributes release];
+	
+	[super dealloc];
+}
+
+
+
+
 /*
 	Rebuilds the Group list from the Address Book and re-sets the selection in case the selected object ceased existing after the rebuild.
  */
@@ -143,8 +156,6 @@
 	[sender setTitle:NSLocalizedString(@"Processing Address Book", @"Processing AddressBook")];
 	[sender display];
 	ABAddressBook * ab = [ABAddressBook sharedAddressBook];
-	NSArray * ABGroups = [ab groups];
-	NSEnumerator * myEnum = [ABGroups objectEnumerator];
 	NSArray * people = nil ;	
 	NSString * selectedGroup = [[UDC valueForKeyPath:@"values.selectedGroup"] objectForKey:MENUOBJECT];
 	if ([selectedGroup isEqualToString:MENUITEMALL]) {
@@ -172,7 +183,7 @@
 		([[UD valueForKey:@"threadedDisplay"] boolValue] ? @"yes": @"no") , @"DisplayInThreadedMode", 
 		nil]
 			forKey:@"mailboxUserInfo"];
-	myEnum = [people objectEnumerator];
+	NSEnumerator * myEnum = [people objectEnumerator];
 	ABPerson * person;
 	NSMutableArray * rules = [NSMutableArray arrayWithCapacity:[people count]];
 	NSDictionary * ruleDict;
