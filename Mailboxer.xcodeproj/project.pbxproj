@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,47 +11,47 @@
 		6C4B90C30BDC2F780086096A /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6C4B90C20BDC2F780086096A /* Icon.icns */; };
 		6C54D70A0BBAF45B00D4B7F2 /* VersionChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C54D7090BBAF45B00D4B7F2 /* VersionChecker.m */; };
 		6C54D7B10BBAFBB600D4B7F2 /* VersionChecker.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C54D7AF0BBAFBB600D4B7F2 /* VersionChecker.strings */; };
+		6C980F741182227B00FD5122 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C980F721182227B00FD5122 /* MainMenu.xib */; };
 		6CBF246C0BD525AE007B034F /* readme.html in Resources */ = {isa = PBXBuildFile; fileRef = 6CBF246B0BD525AE007B034F /* readme.html */; };
 		6CD8BC0B0BD2EE9B006F5513 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 6CD8BC090BD2EE9B006F5513 /* Credits.html */; };
 		6CFBB7D909D43D63009151B2 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFBB7D809D43D63009151B2 /* AddressBook.framework */; };
 		6CFBB7F209D43D9C009151B2 /* Magic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFBB7F109D43D9C009151B2 /* Magic.m */; };
-		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* Mailboxer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mailboxer_Prefix.pch; sourceTree = "<group>"; };
-		6C0416740BD50B9F00F6AF42 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/MainMenu.nib; sourceTree = "<group>"; };
-		6C04167F0BD50BBF00F6AF42 /* French */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6C0416920BD50DC400F6AF42 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = French; path = French.lproj/Credits.html; sourceTree = "<group>"; };
-		6C26C0D90BB569CC0001C5D3 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C04167F0BD50BBF00F6AF42 /* French */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C0416920BD50DC400F6AF42 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = French; path = fr.lproj/Credits.html; sourceTree = "<group>"; };
+		6C26C0D90BB569CC0001C5D3 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C4B90C20BDC2F780086096A /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		6C54D7080BBAF45B00D4B7F2 /* VersionChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionChecker.h; sourceTree = "<group>"; };
 		6C54D7090BBAF45B00D4B7F2 /* VersionChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionChecker.m; sourceTree = "<group>"; };
-		6C54D7B00BBAFBB600D4B7F2 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/VersionChecker.strings; sourceTree = "<group>"; };
-		6C54D7B20BBAFBC900D4B7F2 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/VersionChecker.strings; sourceTree = "<group>"; };
-		6CBF24760BD5271D007B034F /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
-		6CBF24830BD52849007B034F /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/MainMenu.nib; sourceTree = "<group>"; };
-		6CC9EFB30BD64D7E00BE5FF8 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = French; path = French.lproj/readme.html; sourceTree = "<group>"; };
-		6CC9EFDC0BD67A7300BE5FF8 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = German; path = German.lproj/readme.html; sourceTree = "<group>"; };
-		6CD8BBF50BD2E7DB006F5513 /* German */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6CD8BBFD0BD2EDAC006F5513 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6CD8BC010BD2EE66006F5513 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/VersionChecker.strings; sourceTree = "<group>"; };
-		6CD8BC080BD2EE76006F5513 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6CD8BC0A0BD2EE9B006F5513 /* German */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; name = German; path = German.lproj/Credits.html; sourceTree = "<group>"; };
-		6CD8BCA00BD2F122006F5513 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = English; path = English.lproj/Credits.html; sourceTree = "<group>"; };
+		6C54D7B00BBAFBB600D4B7F2 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/VersionChecker.strings; sourceTree = "<group>"; };
+		6C54D7B20BBAFBC900D4B7F2 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = de.lproj/VersionChecker.strings; sourceTree = "<group>"; };
+		6C980F731182227B00FD5122 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6C980F751182228300FD5122 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6C980F761182228900FD5122 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6CC9EFB30BD64D7E00BE5FF8 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = French; path = fr.lproj/readme.html; sourceTree = "<group>"; };
+		6CC9EFDC0BD67A7300BE5FF8 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = German; path = de.lproj/readme.html; sourceTree = "<group>"; };
+		6CD8BBF50BD2E7DB006F5513 /* German */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = German; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6CD8BBFD0BD2EDAC006F5513 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6CD8BC010BD2EE66006F5513 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/VersionChecker.strings; sourceTree = "<group>"; };
+		6CD8BC080BD2EE76006F5513 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6CD8BC0A0BD2EE9B006F5513 /* German */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; name = German; path = de.lproj/Credits.html; sourceTree = "<group>"; };
+		6CD8BCA00BD2F122006F5513 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = English; path = en.lproj/Credits.html; sourceTree = "<group>"; };
 		6CFBB7D809D43D63009151B2 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
 		6CFBB7F009D43D9C009151B2 /* Magic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Magic.h; sourceTree = "<group>"; };
 		6CFBB7F109D43D9C009151B2 /* Magic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Magic.m; sourceTree = "<group>"; };
-		6CFBB8D109D49C50009151B2 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/readme.html; sourceTree = "<group>"; };
+		6CFBB8D109D49C50009151B2 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = en.lproj/readme.html; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Mailboxer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mailboxer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,9 +128,9 @@
 				6CD8BC090BD2EE9B006F5513 /* Credits.html */,
 				6C26C0D80BB569CC0001C5D3 /* Localizable.strings */,
 				8D1107310486CEB800E47090 /* Info.plist */,
+				6C980F721182227B00FD5122 /* MainMenu.xib */,
 				6C54D7AF0BBAFBB600D4B7F2 /* VersionChecker.strings */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -171,8 +171,17 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Mailboxer" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				de,
+				en,
+				fr,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Mailboxer */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,13 +196,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				6CBF246C0BD525AE007B034F /* readme.html in Resources */,
 				6C26C0DA0BB569CC0001C5D3 /* Localizable.strings in Resources */,
 				6C54D7B10BBAFBB600D4B7F2 /* VersionChecker.strings in Resources */,
 				6CD8BC0B0BD2EE9B006F5513 /* Credits.html in Resources */,
 				6C4B90C30BDC2F780086096A /* Icon.icns in Resources */,
+				6C980F741182227B00FD5122 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,16 +232,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C0416740BD50B9F00F6AF42 /* French */,
-				6CBF24760BD5271D007B034F /* English */,
-				6CBF24830BD52849007B034F /* German */,
-			);
-			name = MainMenu.nib;
-			sourceTree = "<group>";
-		};
 		6C26C0D80BB569CC0001C5D3 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -251,6 +250,16 @@
 				6CD8BC010BD2EE66006F5513 /* French */,
 			);
 			name = VersionChecker.strings;
+			sourceTree = "<group>";
+		};
+		6C980F721182227B00FD5122 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C980F731182227B00FD5122 /* de */,
+				6C980F751182228300FD5122 /* en */,
+				6C980F761182228900FD5122 /* fr */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		6CBF246B0BD525AE007B034F /* readme.html */ = {
@@ -322,7 +331,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx10.4;
 			};
 			name = Debug;
 		};
@@ -332,7 +341,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx10.4;
 			};
 			name = Release;
 		};
