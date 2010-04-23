@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>entries</key>
+	<array>
+		<dict>
+			<key>source</key>
+			<string>Help</string>
+			<key>target</key>
+			<string>Hilfe</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Mailboxer Help</string>
+			<key>target</key>
+			<string>Mailboxer Hilfe</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Services</string>
+			<key>target</key>
+			<string>Dienste</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Hide Mailboxer</string>
+			<key>target</key>
+			<string>Mailboxer ausblenden</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Quit Mailboxer</string>
+			<key>target</key>
+			<string>Mailboxer beenden</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Hide Others</string>
+			<key>target</key>
+			<string>Andere ausblenden</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Show All</string>
+			<key>target</key>
+			<string>Alle einblenden</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Window</string>
+			<key>target</key>
+			<string>Fenster</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Zoom</string>
+			<key>target</key>
+			<string>Zoom</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Mailboxer</string>
+			<key>target</key>
+			<string>Mailboxer</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Select ‘All Contacts’ or the group from your Address Book which you want Mailboxer to use.</string>
+			<key>target</key>
+			<string>,Alle Kontakte‘ oder die Gruppe aus dem Adreßbuch, die Mailboxer verwenden soll auswählen.</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>OtherViews</string>
+			<key>target</key>
+			<string>OtherViews</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Item1</string>
+			<key>target</key>
+			<string>Item1</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Item2</string>
+			<key>target</key>
+			<string>Item2</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Item3</string>
+			<key>target</key>
+			<string>Item3</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Minimize</string>
+			<key>target</key>
+			<string>Minimize</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Enter the name of the folder containing Mailboxer's Smart Folders.</string>
+			<key>target</key>
+			<string>Der Ordner mit intelligenten Postfächern, den Mailboxer in Mail anlegt erhält diesen Namen.</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>earthlingsoft Website</string>
+			<key>target</key>
+			<string>earthlingsoft Website</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Mailboxer Website</string>
+			<key>target</key>
+			<string>Mailboxer Webseite</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Donate via PayPal</string>
+			<key>target</key>
+			<string>Über PayPal spenden</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Send E-Mail</string>
+			<key>target</key>
+			<string>E-Mail senden</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Edit</string>
+			<key>target</key>
+			<string>Bearbeiten</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Paste</string>
+			<key>target</key>
+			<string>Einsetzen</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Delete</string>
+			<key>target</key>
+			<string>Löschen</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Cut</string>
+			<key>target</key>
+			<string>Ausschneiden</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Redo</string>
+			<key>target</key>
+			<string>Wiederholen</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Copy</string>
+			<key>target</key>
+			<string>Kopieren</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Undo</string>
+			<key>target</key>
+			<string>Widerrufen</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Select All</string>
+			<key>target</key>
+			<string>Alle auswählen</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>MainMenu</string>
+			<key>target</key>
+			<string>MainMenu</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>File</string>
+			<key>target</key>
+			<string>Ablage</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Close</string>
+			<key>target</key>
+			<string>Fenster schließen</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Preferences</string>
+			<key>target</key>
+			<string>Einstellungen</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Received Date</string>
+			<key>target</key>
+			<string>Received Date</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Ascending</string>
+			<key>target</key>
+			<string>Aufsteigend</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Descending</string>
+			<key>target</key>
+			<string>Absteigend</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Preferences…</string>
+			<key>target</key>
+			<string>Einstellungen…</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Check for Update…</string>
+			<key>target</key>
+			<string>Nach Update suchen…</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Open Main Window</string>
+			<key>target</key>
+			<string>Hauptfenster öffnen</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Create Smart Mailboxes</string>
+			<key>target</key>
+			<string>Wiederholen</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>AB</string>
+			<key>target</key>
+			<string>AB</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Sort By:</string>
+			<key>target</key>
+			<string>Sortiert nach:</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Sort Order:</string>
+			<key>target</key>
+			<string>Ausschneiden</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Smart Mailbox contents</string>
+			<key>target</key>
+			<string>Kopieren</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>Radio</string>
+			<key>target</key>
+			<string>Radio</string>
+		</dict>
+		<dict>
+			<key>source</key>
+			<string>About Mailboxer</string>
+			<key>target</key>
+			<string>Über Mailboxer</string>
+		</dict>
+	</array>
+	<key>sourceLanguage</key>
+	<string>English</string>
+	<key>targetLanguage</key>
+	<string>German</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

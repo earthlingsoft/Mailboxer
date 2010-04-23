@@ -1,0 +1,32 @@
+﻿/* New Version Dialog Text With Download Option (1st escape is CFBundleName 2nd is CFBundleVersion) */
+"%@ %@ is available. Do you want to download this version now?" = "%@ %@ is available. Do you want to download this version now?";
+
+/* New Version Dialog Cancel Button */
+"Cancel" = "Cancel";
+
+/* New Version Dialog Text Without Download Option (1st escape is CFBundleExecutable 2nd is CFBundleVersion) */
+"%@ %@ is available." = "%@ %@ is available.";
+
+/* Version Check Failed Dialog Title (1st escape is the reason which is localized in AppKit) */
+"Reason: %@" = "Reason: %@";
+
+/* No New Version Dialog Text (1st escape is CFBundleName) */
+"You are running the latest version of %@." = "You are running the latest version of %@.";
+
+/* New Version Dialog Download Button */
+"Download" = "Download";
+
+/* No New Version Dialog OK Button
+   No New Version Dialog Default Button
+   Version Check Failed Dialog Default Button */
+"OK" = "OK";
+
+/* Version Check Failed Dialog Title */
+"Version Check Failed" = "Version Check Failed";
+
+/* New Version Dialog Title */
+"New Version Available" = "New Version Available";
+
+/* No New Version Dialog Title */
+"No New Version Available" = "No New Version Available";
+

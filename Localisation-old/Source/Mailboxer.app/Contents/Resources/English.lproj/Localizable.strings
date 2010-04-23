@@ -1,0 +1,74 @@
+﻿/* All Contacts */
+"All Contacts" = "All Contacts";
+
+/* Info text at the bottom of the window, three strings are inserted. The Address Book group name can also be the complete address book. */
+"Info Text. Command name: %@, Smart Mailbox name: %@, AddressBook Group name: %@, CCstatus: %@" = "The “%@” command will update your settings for Mail's smart mailboxes by replacing or adding the Smart Mailbox folder “%@”.
+
+Inside the new folder there will be a Smart Mailbox for each contact in %@. These Smart Mailboxes will contain all messages in which any of the contact's e-mail addresses occurs as a %@.
+";
+
+/* Info text at the bottom of the window, six strings are inserted. The Address Book group name can also be the complete address book. */
+"Info Text. Command name: %@, Smart Mailbox name: %@, AddressBook Group name: %@, CCstatus: %@, Quitting Mail: %@ , Restarting Mail:%@" = "The “%1$@” command will
+
+	%6$@
+	• Take all Contacts in %3$@
+	• Create a Smart Mailbox with the contact’s name for each of them. This Smart Mailbox will contain all messages where any of the contact’s E-Mail addresses is a %5$@
+	• Place all of these into a Smart Mailbox Folder named “%2$@”%7$@";
+
+/* bullet point that Mail will be quit  */
+". Quit Mail" = "• Quit Mail";
+
+/* bullet point that Mail will be relaunched, should start with \n\t• */
+". Relaunch Mail" = "\n\t• Re-launch Mail";
+
+/* the following two need to fit in as the 3rd %@ in the string above */
+/* the group '%@' of your address book */
+"the group '%@' of your address book" = "the group “%@” of your Address Book";
+
+/* your address book */
+"your address book" = "your Address Book";
+
+
+/* the following two need to fit in as the 4th %@ string above */
+/* sender, recipient or carbon copy recipient */
+"sender, recipient or carbon copy recipient" = "sender, recipient or carbon copy recipient";
+
+/* sender or recipient */
+"sender or recipient" = "sender or recipient";
+
+
+
+/* Mail will be quit and re-launched.
+	This string appears below the long text in the window if Mail is currently running */
+"Mail will be quit and re-launched." = "Mail will be quit and re-launched.";
+
+
+
+/* The following four need to fit in the button at the bottom of the window. The first one should be the same as the button text in the nib */
+
+/* Create Smart Mailboxes */
+"Create Smart Mailboxes" = "Create Smart Mailboxes";
+
+/* Quitting Mail */
+"Quitting Mail" = "Quitting Mail";
+
+/* Processing AddressBook */
+"Processing Address Book" = "Processing Address Book";
+
+/* Launching Mail */
+"Relaunching Mail" = "Re-launching Mail";
+
+
+
+
+/* Suffix for Backup file name */
+"Pre Mailboxer" = "(pre Mailboxer)";
+
+
+
+/* Items of the sort order menu in the Preferences */
+"Date Received" = "Date Received";
+"Mailbox" = "Mailbox";
+"Subject" = "Subject";
+
+
