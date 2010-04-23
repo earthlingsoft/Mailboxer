@@ -105,7 +105,7 @@
 
 /*
 	Rebuilds the Group list from the Address Book and re-sets the selection in case the selected object ceased existing after the rebuild.
- */
+*/
 - (void) buildGroupList {
 	// rebuild the group list
 	ABAddressBook * ab = [ABAddressBook sharedAddressBook];
@@ -295,13 +295,13 @@
 	[myDict setObject:[name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] forKey:@"MailboxName"];
 	
 	ABMultiValue * emails = [person valueForProperty:kABEmailProperty];
-	int n = [emails count];
+	NSInteger n = [emails count];
 	if (n==0) {
 		return nil;
 	}
 	NSString * address;
 	NSMutableArray * addressArray = [NSMutableArray arrayWithCapacity:2*n];
-	int i = 0;
+	NSInteger i = 0;
 	while (i< n) {
 		address = [emails valueAtIndex:i];		
 		
@@ -460,7 +460,7 @@
 }
 
 - (void) error: (NSString*) error {
-	NSLog(error);
+	NSLog(@"%@", error);
 	NSBeep();
 	[self setValue:[NSNumber numberWithBool:NO] forKey:@"running"];
 }
@@ -473,7 +473,7 @@
 // for the various actions in the help menu
 - (void) readme:(id) sender {
 	NSWorkspace * WORKSPACE = [NSWorkspace sharedWorkspace];
-	int tag = [sender tag];
+	NSInteger tag = [sender tag];
 	switch (tag) {
 		case 1: // earthlingsoft
 			[WORKSPACE openURL:[NSURL URLWithString:@"http://earthlingsoft.net/"]];

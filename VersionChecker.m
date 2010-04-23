@@ -98,7 +98,7 @@ static NSString *EVCURLKey = @"URL";
 }
 
 - (void)URLResourceDidFinishLoading:(NSURL *)sender {
-    int result;
+    NSInteger result;
     //NSDictionary *newDict = [NSDictionary dictionaryWithContentsOfURL:sender];
     NSDictionary *newDict = [[[[NSString alloc] initWithData:_data encoding:NSUTF8StringEncoding] autorelease] propertyList];
 
@@ -145,7 +145,7 @@ static NSString *EVCURLKey = @"URL";
 }
 - (void)URL:(NSURL *)sender resourceDidFailLoadingWithReason:(NSString *)reason {
     [self autorelease];
-    NSLog(@"fail: %i", self);
+    NSLog(@"fail: %@", [self description]);
     if(!silentCheck) {
         NSRunAlertPanel(NSLocalizedStringFromTable(@"Version Check Failed", @"VersionChecker", @"Version Check Failed Dialog Title"),
                         [NSString stringWithFormat:NSLocalizedStringFromTable(@"Reason: %@", @"VersionChecker", @"Version Check Failed Dialog Title (1st escape is the reason which is localized in AppKit)"),
@@ -190,7 +190,7 @@ static NSString *EVCURLKey = @"URL";
 
 - (BOOL)writeToFile {
     NSSavePanel *s = [NSSavePanel savePanel];
-    int result = [s runModal];
+    NSInteger result = [s runModal];
 
     if(result == NSOKButton) {
         return [infoDict writeToFile:[s filename] atomically:YES];
