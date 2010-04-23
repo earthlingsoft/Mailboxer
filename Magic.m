@@ -82,7 +82,7 @@
 	
 	// look whether there are updates if necessary
 	if ( [[UDC valueForKeyPath:@"values.lookForUpdate"] boolValue] ) {
-		[self menuCheckVersion:self];
+		[VersionChecker checkVersionForURLString:@"http://www.earthlingsoft.net/Mailboxer/Mailboxer.xml" silent:YES];
 	}
 	
 	return self;
