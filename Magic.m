@@ -166,7 +166,6 @@
 		people = [myGroup members];
 	}
 	else {
-		// eeek!
 		[self error:NSLocalizedString(@"Selected group wasn't recognisable.",@"Selected group couldn't be recognised.")];
 		return;
 	}
@@ -205,9 +204,22 @@
 		rules, @"MailboxChildren", 
 		nil ];
 
-	NSString * myPath = [@"~/Library/Mail/SmartMailboxes.plist" stringByExpandingTildeInPath];
-	NSDictionary * oldDict = [NSDictionary dictionaryWithContentsOfFile:myPath];
-	
+	NSString * myPath =[@"~/Library/Mail/V2/MailData/SyncedSmartMailboxes.plist" stringByExpandingTildeInPath];
+    BOOL X7OrAbove = YES;
+    if (![[NSFileManager defaultManager] fileExistsAtPath:myPath]) {
+        // file does not exist at X.7+ path: use old path
+        myPath = [@"~/Library/Mail/SmartMailboxes.plist" stringByExpandingTildeInPath];
+        X7OrAbove = NO;
+    }
+
+    id oldDict;
+    if (X7OrAbove) {
+        oldDict = [NSArray arrayWithContentsOfFile:myPath];
+    }
+    else {
+        oldDict = [NSDictionary dictionaryWithContentsOfFile:myPath];
+    }
+    
 	NSMutableArray * mailboxArray;
 	NSNumber * version;
 	if (oldDict) {
@@ -217,13 +229,18 @@
 		[[NSFileManager defaultManager] removeFileAtPath:myBackupPath handler:nil]; 
 		[[NSFileManager defaultManager] movePath:myPath toPath:myBackupPath handler:nil];
 		
-		version = [oldDict objectForKey:@"version"];
-		mailboxArray = [[[oldDict objectForKey:@"mailboxes"] mutableCopy] autorelease];
+        if (X7OrAbove) {
+            mailboxArray = [[oldDict mutableCopy] autorelease];
+        }
+        else {
+            mailboxArray = [[[oldDict objectForKey:@"mailboxes"] mutableCopy] autorelease];
+            version = [oldDict objectForKey:@"version"];
+        }
+        
 		NSDictionary * dict1;
 		NSString * name;
 		NSEnumerator * myEnum = [mailboxArray objectEnumerator];
-	
-		while ( dict1 = [myEnum nextObject]) {
+		while (dict1 = [myEnum nextObject]) {
 			name = [dict1 objectForKey:@"MailboxName"];
 			if ([name isEqualToString:myMailboxName]) {
 				[mailboxArray removeObject:dict1];
@@ -236,14 +253,18 @@
 		version = [NSNumber numberWithInt:1];
 	}
 	
-	// create and write total dictionary
-	NSDictionary * finalDict = [NSDictionary dictionaryWithObjectsAndKeys:mailboxArray, @"mailboxes", version, @"version", nil];	
+	// write smart mailboxes file
+    if (X7OrAbove) {
+        [mailboxArray writeToFile:myPath atomically:YES];
+    }
+    else {
+        NSDictionary * finalDict = [NSDictionary dictionaryWithObjectsAndKeys:mailboxArray, @"mailboxes", version, @"version", nil];
+        [finalDict writeToFile:myPath atomically:YES];
+    }
 	
-	[finalDict writeToFile:myPath atomically:NO];
 	
 
-	// Finally, launch Mail
-	
+	// Finally, relaunch Mail
 	if (didQuitMail) {
 		[sender setTitle:NSLocalizedString(@"Relaunching Mail",@"Relaunching Mail")];	
 		[sender display];
