@@ -425,26 +425,28 @@
 
 
 - (BOOL) mailIsRunning {
-	BOOL r = NO;
+	BOOL result = NO;
 	
 	if (!running) {
-		NSArray * appArray = [[NSWorkspace sharedWorkspace] launchedApplications];
-		NSEnumerator * myEnum = [appArray objectEnumerator];
-		NSDictionary * appDict;
-		while (appDict = [myEnum nextObject]) {
-			if ([[appDict objectForKey:@"NSApplicationBundleIdentifier"] isEqualToString:@"com.apple.mail"]) {
-				r = YES;
+		NSArray * runningApplications = [[NSWorkspace sharedWorkspace] runningApplications];
+		
+		for (NSRunningApplication * application in runningApplications) {
+			if ([application.bundleIdentifier isEqualToString:@"com.apple.mail"]) {
+				result = YES;
+				break;
 			}
 		}
-		mailIsRunningCache = r;
+		mailIsRunningCache = result;
 	}
 	else {
 		// while we are processing stuff do not change the display when Mail is quit and relaunched.
-		r = mailIsRunningCache;
+		result = mailIsRunningCache;
 	}
+	
 	// NSLog([NSString stringWithFormat:@"mailIsRunning: %@ (running: %i)", [NSNumber numberWithBool:r], running]);
-	return r;
+	return result;
 }
+
 
 - (void) MailChanged: (NSNotification*) theNotification {
 	NSString * appCode = [[theNotification userInfo] objectForKey:@"NSApplicationBundleIdentifier"];
