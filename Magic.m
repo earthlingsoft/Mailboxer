@@ -431,7 +431,11 @@
 }
 
 - (NSImage*) smartFolderIcon {
-	NSImage * im = [[NSWorkspace sharedWorkspace] iconForFileType:@"com.apple.finder.smart-folder"];
+	// Interesting detail about iconForFileType:
+	// * on Mac OS ≤ X.7 @"savedSearch" works
+	// * on Mac OS > X.7 @"savedsearch" (no caps) or @"com.apple.finder.smart-folder" work
+    // * on all versions NSFileTypeForHFSTypeCode('sfld') works
+	NSImage * im = [[NSWorkspace sharedWorkspace] iconForFileType:NSFileTypeForHFSTypeCode('sfld')];
 	[im setSize:NSMakeSize(128.0,128.0)];
 	return im;
 }
