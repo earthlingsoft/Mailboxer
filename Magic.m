@@ -196,7 +196,7 @@
 
 	NSString * myMailboxName = [UDC valueForKeyPath:@"values.folderName"];
 				
-	NSDictionary * myMailbox = [NSDictionary dictionaryWithObjectsAndKeys:
+	NSDictionary * mailboxerMailbox = [NSDictionary dictionaryWithObjectsAndKeys:
 		[NSNumber numberWithInt:18], @"IMAPMailboxAttributes", 
 		[self uuid], @"MailboxID", 
 		myMailboxName, @"MailboxName", 
@@ -205,45 +205,39 @@
 		rules, @"MailboxChildren", 
 		nil ];
 
-	NSString * myPath = @"~/Library/Mail/V2/MailData/SyncedSmartMailboxes.plist";
-    myPath = [myPath stringByExpandingTildeInPath];
+    NSString * plistPath = [@"~/Library/Mail/V2/MailData/SyncedSmartMailboxes.plist" stringByExpandingTildeInPath];
     
-    id oldDict = [NSArray arrayWithContentsOfFile:myPath];
+	NSMutableArray * newMailboxes = [NSMutableArray array];
 
-	NSMutableArray * mailboxesArray = [NSMutableArray array];
-	if (oldDict) {
+    NSArray * previousSmartMailboxes = [NSArray arrayWithContentsOfFile:plistPath];
+
+	if (previousSmartMailboxes) {
 		// remove old backup file and make existing plist file the backup file
 		// if you read up to here you might as well enjoy the lack of error handling
-		NSString * myBackupPath = [[myPath stringByDeletingPathExtension] stringByAppendingFormat:@" %@.plist", NSLocalizedString(@"Pre Mailboxer", @"Suffix for Backup file name")];
+		NSString * backupPlistPath = [[plistPath stringByDeletingPathExtension] stringByAppendingFormat:@" %@.plist", NSLocalizedString(@"Pre Mailboxer", @"Suffix for Backup file name")];
 		NSError * myError;
-		[[NSFileManager defaultManager] removeItemAtPath:myBackupPath error:&myError];
-		[[NSFileManager defaultManager] moveItemAtPath:myPath toPath:myBackupPath error:&myError];
-            mailboxArray = [[oldDict mutableCopy] autorelease];
+		[[NSFileManager defaultManager] removeItemAtPath:backupPlistPath error:&myError];
+		[[NSFileManager defaultManager] moveItemAtPath:plistPath toPath:backupPlistPath error:&myError];
         
-		NSDictionary * dict1;
-		NSString * name;
-		NSEnumerator * myEnum = [mailboxArray objectEnumerator];
-		while (dict1 = [myEnum nextObject]) {
-			name = [dict1 objectForKey:@"MailboxName"];
-			if ([name isEqualToString:myMailboxName]) {
-				[mailboxArray removeObject:dict1];
+		// copy existing non-Mailboxer smart mailboxes in the file to the new smart mailbox list
+		for (NSDictionary * mailboxDict in previousSmartMailboxes) {
+			if (![[mailboxDict objectForKey:@"MailboxName"] isEqualToString:myMailboxName]) {
+				[newMailboxes addObject:mailboxDict];
 			}
 		}
-		[mailboxArray addObject:myMailbox];
-	}
-	else {
-		mailboxArray = [NSMutableArray arrayWithObject:myMailbox];
 	}
 	
-	[mailboxArray writeToFile:myPath atomically:YES];
+	[newMailboxes addObject:mailboxerMailbox];
+	[newMailboxes writeToFile:plistPath atomically:YES];
 
 	
 	// Finally, relaunch Mail
 	if (didQuitMail) {
 		[sender setTitle:NSLocalizedString(@"Relaunching Mail",@"Relaunching Mail")];	
 		[sender display];
-		// [[NSWorkspace sharedWorkspace] launchApplication:@"Mail"]; // somewhat unreliable (gives LSOpenFromURLSpec() retruned -609 for application mail path (null) message about 1/3 of the runs
-		NSAppleScript * myScript = [[NSAppleScript alloc] initWithSource:@"delay 0.5\ntell application \"Mail\" to run\n"];
+		
+		//BOOL [[NSWorkspace sharedWorkspace] launchApplication:@"Mail"]; // somewhat unreliable (gives LSOpenFromURLSpec() returned -609 for application mail path (null) message about 1/3 of the runs
+		NSAppleScript * myScript = [[NSAppleScript alloc] initWithSource:@"delay 0.5\ntell application \"Mail\" to activate\n"];
 		[myScript executeAndReturnError:nil];
 		[myScript release];		
 	}

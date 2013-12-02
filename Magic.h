@@ -30,6 +30,7 @@
 @property (readonly) NSImage * vcardIcon;
 @property (readonly) NSImage * AddressBookIcon;
 @property (readonly) NSImage * smartFolderIcon;
+@property (readonly) BOOL mailIsRunning;
 
 - (id) init;
 - (void) buildGroupList;
@@ -37,11 +38,10 @@
 - (NSDictionary *) ruleDictionaryForPerson:(ABPerson*) person;
 - (NSString *) updateInfoText;
 - (NSString*) uuid;
-- (BOOL) mailIsRunning;
 - (IBAction) readme:(id) sender;
 - (NSString*) myVersionString;
 - (void) error: (NSString*) error;
-- (IBAction)menuCheckVersion:(id)sender;
+- (IBAction) menuCheckVersion:(id)sender;
 @end
 
 @interface ABGroup (ESSortExtension)
