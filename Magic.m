@@ -327,7 +327,7 @@
 	while (i< n) {
 		address = [emails valueAtIndex:i];		
 		
-		[addressArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:[self uuid], @"CriterionUniqueId", address, @"Expression",  @"From", @"Header", nil]];
+		[addressArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:[self uuid], @"CriterionUniqueId", address, @"Expression", @"from", @"Header", nil]];
 		
 		if ([[UDC valueForKeyPath:@"values.includeSentMessages"] boolValue]) {
 			[addressArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:[self uuid], @"CriterionUniqueId", address, @"Expression", @"AnyRecipient", @"Header", nil]];
