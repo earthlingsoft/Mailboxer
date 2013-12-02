@@ -12,7 +12,7 @@
 		6C331B64184CFC110084DEF6 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C331B60184CF1CD0084DEF6 /* Sparkle.framework */; };
 		6C3BAD73184D053C00D0A4CE /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 6C3BAD72184D053C00D0A4CE /* dsa_pub.pem */; };
 		6C3BAD75184D0A2700D0A4CE /* net.earthlingsoft.mailboxer.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C3BAD74184D0A2700D0A4CE /* net.earthlingsoft.mailboxer.plist */; };
-		6C4B90C30BDC2F780086096A /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6C4B90C20BDC2F780086096A /* Icon.icns */; };
+		6C3BAD7D184D16AF00D0A4CE /* Mailboxer.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6C3BAD7C184D16AF00D0A4CE /* Mailboxer.icns */; };
 		6C980F741182227B00FD5122 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C980F721182227B00FD5122 /* MainMenu.xib */; };
 		6CBF246C0BD525AE007B034F /* readme.html in Resources */ = {isa = PBXBuildFile; fileRef = 6CBF246B0BD525AE007B034F /* readme.html */; };
 		6CD8BC0B0BD2EE9B006F5513 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 6CD8BC090BD2EE9B006F5513 /* Credits.html */; };
@@ -48,7 +48,7 @@
 		6C331B60184CF1CD0084DEF6 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Sparkle/DerivedData/Sparkle/Build/Products/Release/Sparkle.framework; sourceTree = "<group>"; };
 		6C3BAD72184D053C00D0A4CE /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		6C3BAD74184D0A2700D0A4CE /* net.earthlingsoft.mailboxer.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = net.earthlingsoft.mailboxer.plist; path = ../../Library/Preferences/net.earthlingsoft.mailboxer.plist; sourceTree = "<group>"; };
-		6C4B90C20BDC2F780086096A /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		6C3BAD7C184D16AF00D0A4CE /* Mailboxer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Mailboxer.icns; sourceTree = "<group>"; };
 		6C980F731182227B00FD5122 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6C980F751182228300FD5122 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6C980F761182228900FD5122 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6C3BAD7C184D16AF00D0A4CE /* Mailboxer.icns */,
 				6C3BAD72184D053C00D0A4CE /* dsa_pub.pem */,
-				6C4B90C20BDC2F780086096A /* Icon.icns */,
 				6CBF246B0BD525AE007B034F /* readme.html */,
 				6CD8BC090BD2EE9B006F5513 /* Credits.html */,
 				6C26C0D80BB569CC0001C5D3 /* Localizable.strings */,
@@ -216,9 +216,9 @@
 				6C3BAD75184D0A2700D0A4CE /* net.earthlingsoft.mailboxer.plist in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				6CBF246C0BD525AE007B034F /* readme.html in Resources */,
+				6C3BAD7D184D16AF00D0A4CE /* Mailboxer.icns in Resources */,
 				6C26C0DA0BB569CC0001C5D3 /* Localizable.strings in Resources */,
 				6CD8BC0B0BD2EE9B006F5513 /* Credits.html in Resources */,
-				6C4B90C30BDC2F780086096A /* Icon.icns in Resources */,
 				6C980F741182227B00FD5122 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
