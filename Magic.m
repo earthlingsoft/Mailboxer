@@ -2,8 +2,8 @@
 //  Magic.m
 //  Mailboxer
 //
-//  Created by  Sven on 24.03.06.
-//  Copyright 2006 earthlingsoft. All rights reserved.
+//  Created by Sven on 24.03.06.
+//  Copyright 2006-2013 earthlingsoft. All rights reserved.
 //
 //
 

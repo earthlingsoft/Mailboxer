@@ -2,8 +2,8 @@
 //  main.m
 //  Mailboxer
 //
-//  Created by  Sven on 24.03.06.
-//  Copyright __MyCompanyName__ 2006. All rights reserved.
+//  Created by Sven on 24.03.06.
+//  Copyright 2006-2013 earthlingsoft. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
