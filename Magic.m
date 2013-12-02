@@ -204,25 +204,12 @@
 		rules, @"MailboxChildren", 
 		nil ];
 
-    BOOL X7OrAbove = ([[self class] systemRevision] >= 7);
-
-	NSString * myPath = @"~/Library/Mail/SmartMailboxes.plist";
-    if (X7OrAbove) {
-        myPath = @"~/Library/Mail/V2/MailData/SyncedSmartMailboxes.plist";
-    }
+	NSString * myPath = @"~/Library/Mail/V2/MailData/SyncedSmartMailboxes.plist";
     myPath = [myPath stringByExpandingTildeInPath];
     
-    
-    id oldDict;
-    if (X7OrAbove) {
-        oldDict = [NSArray arrayWithContentsOfFile:myPath];
-    }
-    else {
-        oldDict = [NSDictionary dictionaryWithContentsOfFile:myPath];
-    }
-    
-	NSMutableArray * mailboxArray;
-	NSNumber * version;
+    id oldDict = [NSArray arrayWithContentsOfFile:myPath];
+
+	NSMutableArray * mailboxesArray = [NSMutableArray array];
 	if (oldDict) {
 		// remove old backup file and make existing plist file the backup file
 		// if you read up to here you might as well enjoy the lack of error handling
@@ -230,14 +217,7 @@
 		NSError * myError;
 		[[NSFileManager defaultManager] removeItemAtPath:myBackupPath error:&myError];
 		[[NSFileManager defaultManager] moveItemAtPath:myPath toPath:myBackupPath error:&myError];
- 		
-        if (X7OrAbove) {
             mailboxArray = [[oldDict mutableCopy] autorelease];
-        }
-        else {
-            mailboxArray = [[[oldDict objectForKey:@"mailboxes"] mutableCopy] autorelease];
-            version = [oldDict objectForKey:@"version"];
-        }
         
 		NSDictionary * dict1;
 		NSString * name;
@@ -252,20 +232,11 @@
 	}
 	else {
 		mailboxArray = [NSMutableArray arrayWithObject:myMailbox];
-		version = [NSNumber numberWithInt:1];
 	}
 	
-	// write smart mailboxes file
-    if (X7OrAbove) {
-        [mailboxArray writeToFile:myPath atomically:YES];
-    }
-    else {
-        NSDictionary * finalDict = [NSDictionary dictionaryWithObjectsAndKeys:mailboxArray, @"mailboxes", version, @"version", nil];
-        [finalDict writeToFile:myPath atomically:YES];
-    }
-	
-	
+	[mailboxArray writeToFile:myPath atomically:YES];
 
+	
 	// Finally, relaunch Mail
 	if (didQuitMail) {
 		[sender setTitle:NSLocalizedString(@"Relaunching Mail",@"Relaunching Mail")];	
@@ -532,28 +503,6 @@
     }
 }
 
-
-// Return array with components of the system version.
-+ (NSArray *) systemVersion {
-	NSString * versionString = [[NSDictionary dictionaryWithContentsOfFile:@"/System/Library/CoreServices/SystemVersion.plist"] objectForKey:@"ProductVersion"];
-	NSArray * versionStrings = [versionString componentsSeparatedByString:@"."];
-    NSMutableArray * version = [NSMutableArray arrayWithCapacity:3];
-    
-    for (NSString * component in versionStrings) {
-        [version addObject:[NSNumber numberWithInteger:[component integerValue]]];
-    }
-    
-    return version;
-}
-
-+ (NSUInteger) systemRevision {
-    NSUInteger revision = 6;
-    NSArray * version = [[self class] systemVersion];
-    if ([version count] >= 2) {
-        revision = [[version objectAtIndex:1] integerValue];
-    }
-    return revision;
-}
 
 @end
 
