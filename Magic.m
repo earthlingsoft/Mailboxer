@@ -226,9 +226,10 @@
 		// remove old backup file and make existing plist file the backup file
 		// if you read up to here you might as well enjoy the lack of error handling
 		NSString * myBackupPath = [[myPath stringByDeletingPathExtension] stringByAppendingFormat:@" %@.plist", NSLocalizedString(@"Pre Mailboxer", @"Suffix for Backup file name")];
-		[[NSFileManager defaultManager] removeFileAtPath:myBackupPath handler:nil]; 
-		[[NSFileManager defaultManager] movePath:myPath toPath:myBackupPath handler:nil];
-		
+		NSError * myError;
+		[[NSFileManager defaultManager] removeItemAtPath:myBackupPath error:&myError];
+		[[NSFileManager defaultManager] moveItemAtPath:myPath toPath:myBackupPath error:&myError];
+ 		
         if (X7OrAbove) {
             mailboxArray = [[oldDict mutableCopy] autorelease];
         }
