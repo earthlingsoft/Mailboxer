@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6C26C0DA0BB569CC0001C5D3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C26C0D80BB569CC0001C5D3 /* Localizable.strings */; };
+		6C331B62184CF1D60084DEF6 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C331B60184CF1CD0084DEF6 /* Sparkle.framework */; };
+		6C331B64184CFC110084DEF6 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C331B60184CF1CD0084DEF6 /* Sparkle.framework */; };
+		6C3BAD73184D053C00D0A4CE /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 6C3BAD72184D053C00D0A4CE /* dsa_pub.pem */; };
+		6C3BAD75184D0A2700D0A4CE /* net.earthlingsoft.mailboxer.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C3BAD74184D0A2700D0A4CE /* net.earthlingsoft.mailboxer.plist */; };
 		6C4B90C30BDC2F780086096A /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6C4B90C20BDC2F780086096A /* Icon.icns */; };
-		6C54D70A0BBAF45B00D4B7F2 /* VersionChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C54D7090BBAF45B00D4B7F2 /* VersionChecker.m */; };
-		6C54D7B10BBAFBB600D4B7F2 /* VersionChecker.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C54D7AF0BBAFBB600D4B7F2 /* VersionChecker.strings */; };
 		6C980F741182227B00FD5122 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C980F721182227B00FD5122 /* MainMenu.xib */; };
 		6CBF246C0BD525AE007B034F /* readme.html in Resources */ = {isa = PBXBuildFile; fileRef = 6CBF246B0BD525AE007B034F /* readme.html */; };
 		6CD8BC0B0BD2EE9B006F5513 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 6CD8BC090BD2EE9B006F5513 /* Credits.html */; };
@@ -21,22 +23,32 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6C178BDA184CDD730067A617 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6C331B64184CFC110084DEF6 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* Mailboxer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mailboxer_Prefix.pch; sourceTree = "<group>"; };
 		6C04167F0BD50BBF00F6AF42 /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C0416920BD50DC400F6AF42 /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = French; path = fr.lproj/Credits.html; sourceTree = "<group>"; };
 		6C26C0D90BB569CC0001C5D3 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C331B43184CE24A0084DEF6 /* cleanupSparkle.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = cleanupSparkle.sh; sourceTree = "<group>"; };
+		6C331B60184CF1CD0084DEF6 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Sparkle/DerivedData/Sparkle/Build/Products/Release/Sparkle.framework; sourceTree = "<group>"; };
+		6C3BAD72184D053C00D0A4CE /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		6C3BAD74184D0A2700D0A4CE /* net.earthlingsoft.mailboxer.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = net.earthlingsoft.mailboxer.plist; path = ../../Library/Preferences/net.earthlingsoft.mailboxer.plist; sourceTree = "<group>"; };
 		6C4B90C20BDC2F780086096A /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
-		6C54D7080BBAF45B00D4B7F2 /* VersionChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionChecker.h; sourceTree = "<group>"; };
-		6C54D7090BBAF45B00D4B7F2 /* VersionChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionChecker.m; sourceTree = "<group>"; };
-		6C54D7B00BBAFBB600D4B7F2 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/VersionChecker.strings; sourceTree = "<group>"; };
-		6C54D7B20BBAFBC900D4B7F2 /* German */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = German; path = de.lproj/VersionChecker.strings; sourceTree = "<group>"; };
 		6C980F731182227B00FD5122 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6C980F751182228300FD5122 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6C980F761182228900FD5122 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -44,7 +56,6 @@
 		6CC9EFDC0BD67A7300BE5FF8 /* German */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = German; path = de.lproj/readme.html; sourceTree = "<group>"; };
 		6CD8BBF50BD2E7DB006F5513 /* German */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = German; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6CD8BBFD0BD2EDAC006F5513 /* German */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = German; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6CD8BC010BD2EE66006F5513 /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/VersionChecker.strings; sourceTree = "<group>"; };
 		6CD8BC080BD2EE76006F5513 /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6CD8BC0A0BD2EE9B006F5513 /* German */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = German; path = de.lproj/Credits.html; sourceTree = "<group>"; };
 		6CD8BCA00BD2F122006F5513 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = en.lproj/Credits.html; sourceTree = "<group>"; };
@@ -61,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C331B62184CF1D60084DEF6 /* Sparkle.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				6CFBB7D909D43D63009151B2 /* AddressBook.framework in Frameworks */,
 			);
@@ -81,9 +93,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
-				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
-				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				6C331B60184CF1CD0084DEF6 /* Sparkle.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -99,6 +109,7 @@
 		29B97314FDCFA39411CA2CEA /* Mailboxer */ = {
 			isa = PBXGroup;
 			children = (
+				6C3BAD74184D0A2700D0A4CE /* net.earthlingsoft.mailboxer.plist */,
 				29B97315FDCFA39411CA2CEA /* Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -114,8 +125,6 @@
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				6CFBB7F009D43D9C009151B2 /* Magic.h */,
 				6CFBB7F109D43D9C009151B2 /* Magic.m */,
-				6C54D7080BBAF45B00D4B7F2 /* VersionChecker.h */,
-				6C54D7090BBAF45B00D4B7F2 /* VersionChecker.m */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -123,14 +132,15 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6C3BAD72184D053C00D0A4CE /* dsa_pub.pem */,
 				6C4B90C20BDC2F780086096A /* Icon.icns */,
 				6CBF246B0BD525AE007B034F /* readme.html */,
 				6CD8BC090BD2EE9B006F5513 /* Credits.html */,
 				6C26C0D80BB569CC0001C5D3 /* Localizable.strings */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				6C980F721182227B00FD5122 /* MainMenu.xib */,
-				6C54D7AF0BBAFBB600D4B7F2 /* VersionChecker.strings */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				6C331B43184CE24A0084DEF6 /* cleanupSparkle.sh */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -151,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Mailboxer" */;
 			buildPhases = (
+				6C178BDA184CDD730067A617 /* CopyFiles */,
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				6C178BDC184CDD8E0067A617 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -200,10 +212,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C3BAD73184D053C00D0A4CE /* dsa_pub.pem in Resources */,
+				6C3BAD75184D0A2700D0A4CE /* net.earthlingsoft.mailboxer.plist in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				6CBF246C0BD525AE007B034F /* readme.html in Resources */,
 				6C26C0DA0BB569CC0001C5D3 /* Localizable.strings in Resources */,
-				6C54D7B10BBAFBB600D4B7F2 /* VersionChecker.strings in Resources */,
 				6CD8BC0B0BD2EE9B006F5513 /* Credits.html in Resources */,
 				6C4B90C30BDC2F780086096A /* Icon.icns in Resources */,
 				6C980F741182227B00FD5122 /* MainMenu.xib in Resources */,
@@ -212,6 +225,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6C178BDC184CDD8E0067A617 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = /Users/ssp/Developer/Mailboxer/cleanupSparkle.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -219,7 +248,6 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				6CFBB7F209D43D9C009151B2 /* Magic.m in Sources */,
-				6C54D70A0BBAF45B00D4B7F2 /* VersionChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,16 +272,6 @@
 				6C04167F0BD50BBF00F6AF42 /* French */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		6C54D7AF0BBAFBB600D4B7F2 /* VersionChecker.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C54D7B00BBAFBB600D4B7F2 /* English */,
-				6C54D7B20BBAFBC900D4B7F2 /* German */,
-				6CD8BC010BD2EE66006F5513 /* French */,
-			);
-			name = VersionChecker.strings;
 			sourceTree = "<group>";
 		};
 		6C980F721182227B00FD5122 /* MainMenu.xib */ = {
@@ -292,11 +310,17 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Sparkle/DerivedData/Sparkle/Build/Products/Release/\"",
+				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = Mailboxer;
 			};
 			name = Debug;
@@ -304,10 +328,17 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Sparkle/DerivedData/Sparkle/Build/Products/Release/\"",
+				);
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = Mailboxer;
 				STRIP_INSTALLED_PRODUCT = YES;
 			};
@@ -317,11 +348,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				CODE_SIGN_IDENTITY = "earthlingsoft Software";
+				CODE_SIGN_IDENTITY = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};

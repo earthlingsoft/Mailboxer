@@ -80,11 +80,6 @@
 	
 	[self updateInfoText];
 	
-	// look whether there are updates if necessary
-	if ( [[UDC valueForKeyPath:@"values.lookForUpdate"] boolValue] ) {
-		[VersionChecker checkVersionForURLString:@"http://www.earthlingsoft.net/Mailboxer/Mailboxer.xml" silent:YES];
-	}
-	
 	return self;
 }
 
@@ -489,14 +484,6 @@
 	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 }
 
-
-- (IBAction)menuCheckVersion:(id)sender {
-    if([[NSApp currentEvent] modifierFlags] == (NSAlphaShiftKeyMask|NSShiftKeyMask|NSControlKeyMask|NSAlternateKeyMask|NSCommandKeyMask)) {
-		//        [VersionChecker writeVersionFileWithDownloadURLString:@"http://www.earthlingsoft.net/GeburtstagsChecker/GeburtstagsChecker.sit"];
-    } else {
-		   [VersionChecker checkVersionForURLString:@"http://www.earthlingsoft.net/Mailboxer/Mailboxer.xml" silent:NO];
-    }
-}
 
 
 @end

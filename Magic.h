@@ -9,7 +9,6 @@
 #import <Cocoa/Cocoa.h>
 #import <AddressBook/AddressBook.h>
 #include <uuid/uuid.h>
-#include "VersionChecker.h"
 
 #define MENUNAME @"NAME"
 #define MENUOBJECT @"OBJECT"
@@ -35,14 +34,17 @@
 - (id) init;
 - (void) buildGroupList;
 - (IBAction) do:(id) sender;
+
 - (NSDictionary *) ruleDictionaryForPerson:(ABPerson*) person;
 - (NSString *) updateInfoText;
 - (NSString*) uuid;
+
 - (IBAction) readme:(id) sender;
 - (NSString*) myVersionString;
+
 - (void) error: (NSString*) error;
-- (IBAction) menuCheckVersion:(id)sender;
 @end
+
 
 @interface ABGroup (ESSortExtension)
 - (NSComparisonResult) groupByNameCompare:(ABGroup *)aGroup ;
