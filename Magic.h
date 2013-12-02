@@ -26,6 +26,11 @@
 	NSDictionary * mailboxUserInfo;
 	NSDictionary * myStringAttributes;
 }
+
+@property (readonly) NSImage * vcardIcon;
+@property (readonly) NSImage * AddressBookIcon;
+@property (readonly) NSImage * smartFolderIcon;
+
 - (id) init;
 - (void) buildGroupList;
 - (IBAction) do:(id) sender;

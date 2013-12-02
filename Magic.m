@@ -456,23 +456,22 @@
 }
 
 
-- (NSData*) AddressBookIcon {
+- (NSImage*) AddressBookIcon {
 	NSImage * im = [[NSWorkspace sharedWorkspace] iconForFile:[[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier:@"com.apple.addressbook"]];
 	[im setSize:NSMakeSize(128.0,128.0)];
-	return [im TIFFRepresentation];
+	return im;
 }
 
-- (NSData*) vcardIcon {
+- (NSImage*) vcardIcon {
 	NSImage * im = [[NSWorkspace sharedWorkspace] iconForFileType:@"vcf"];
 	[im setSize:NSMakeSize(128.0,128.0)];
-	return [im TIFFRepresentation];
+	return im;
 }
 
-
-- (NSData*) smartFolderIcon {
-	NSImage * im = [[NSWorkspace sharedWorkspace] iconForFileType:@"savedSearch"];
+- (NSImage*) smartFolderIcon {
+	NSImage * im = [[NSWorkspace sharedWorkspace] iconForFileType:@"com.apple.finder.smart-folder"];
 	[im setSize:NSMakeSize(128.0,128.0)];
-	return [im TIFFRepresentation];
+	return im;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
