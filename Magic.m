@@ -144,8 +144,9 @@
 	[sender setTitle:NSLocalizedString(@"Quitting Mail",@"Quitting Mail") ];
 	[sender setEnabled:NO];
 	[sender display];
+
 	BOOL didQuitMail = NO;
-	if ([[self valueForKey:@"mailIsRunning"] boolValue]) {
+	if ([self mailIsRunning]) {
 		NSAppleScript * myScript = [[NSAppleScript alloc] initWithSource:@"tell application \"Mail\" to quit\n"];
 		[myScript executeAndReturnError:nil];
 		[myScript release];
