@@ -204,14 +204,15 @@
 		rules, @"MailboxChildren", 
 		nil ];
 
-	NSString * myPath =[@"~/Library/Mail/V2/MailData/SyncedSmartMailboxes.plist" stringByExpandingTildeInPath];
-    BOOL X7OrAbove = YES;
-    if (![[NSFileManager defaultManager] fileExistsAtPath:myPath]) {
-        // file does not exist at X.7+ path: use old path
-        myPath = [@"~/Library/Mail/SmartMailboxes.plist" stringByExpandingTildeInPath];
-        X7OrAbove = NO;
-    }
+    BOOL X7OrAbove = ([[self class] systemRevision] >= 7);
 
+	NSString * myPath = @"~/Library/Mail/SmartMailboxes.plist";
+    if (X7OrAbove) {
+        myPath = @"~/Library/Mail/V2/MailData/SyncedSmartMailboxes.plist";
+    }
+    myPath = [myPath stringByExpandingTildeInPath];
+    
+    
     id oldDict;
     if (X7OrAbove) {
         oldDict = [NSArray arrayWithContentsOfFile:myPath];
@@ -531,6 +532,28 @@
     }
 }
 
+
+// Return array with components of the system version.
++ (NSArray *) systemVersion {
+	NSString * versionString = [[NSDictionary dictionaryWithContentsOfFile:@"/System/Library/CoreServices/SystemVersion.plist"] objectForKey:@"ProductVersion"];
+	NSArray * versionStrings = [versionString componentsSeparatedByString:@"."];
+    NSMutableArray * version = [NSMutableArray arrayWithCapacity:3];
+    
+    for (NSString * component in versionStrings) {
+        [version addObject:[NSNumber numberWithInteger:[component integerValue]]];
+    }
+    
+    return version;
+}
+
++ (NSUInteger) systemRevision {
+    NSUInteger revision = 6;
+    NSArray * version = [[self class] systemVersion];
+    if ([version count] >= 2) {
+        revision = [[version objectAtIndex:1] integerValue];
+    }
+    return revision;
+}
 
 @end
 
