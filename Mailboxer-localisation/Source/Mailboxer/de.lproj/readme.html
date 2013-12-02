@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Mailboxer</title>
+<style type="text/css">
+body { background:#eee; color:555; text-align:center; font-family:Georgia, Garamond,Palatino,Times,serif; }
+#main { max-width:35em; padding:3em 1em 1em 0;margin:auto; line-height:1.4em;}
+h1 { font-family:Zapfino; font-weight:normal;}
+.thanks { font-style: italic; }
+dl dt { font-style:italic; margin:2em 0em 0.5em 0em;}
+ul {list-style-type:none; padding:0px; }
+ul li, dl dd ul, dl dd {margin:0px; padding:0px;}
+ul.links li { display : inline;}
+ul.links li:before { content: '\002022'; margin:0em 0.3em; }
+ul.links li.i1:before { content:'';}
+a {text-decoration:none;}
+#oldversions  { display:none;}
+#oldversions:target + p { display:none;}
+#oldversions:target { display:block;} 
+h3 { margin:3em 0em 1em 0em;}
+</style>
+</head>
+<body>
+<div id="main">
+<h1>Mailboxer</h1>
+
+<p>
+Mailboxer erstellt Intelligente Postfächer in Mail für Kontakte aus dem Adressbuch.
+</p>
+<p>
+Obwohl das Mail Programm in Mac OS X bereits alle dafür notwendigen Bausteine enthält, ist es recht umständlich Intelligente Postfächer für bestimmte Personen oder Firmen anzulegen. Hierzu muß für jede dieser Personen das Intelligente Postfach von Hand angelegt und mit allen E-Mail Adressen dieser Person ausgestattet werden. Kommt eine neue Adresse hinzu, muß auch das Intelligente Postfach aktualisiert werden. Mailboxer hilft hierbei.
+</p>
+<p>
+In Mailboxers Hauptfenster kann eine Gruppe aus dem Adressbuch (oder das gesamte Adressbuch) ausgewählt werden.  Für jede darin enthaltene Visitenkarte legt Mailboxer dann ein Intelligentes Postfach an, das die Nachrichten von und an alle E-Mail Adressen dieser Person oder Firma enthält. Diese Intelligenten Postfächer werden dann in einem Order für Intelligente Postfächer in Mail eingefügt. Der Name dieses Ordners kann frei gewählt werden, wobei zu beachten ist, daß eventuell existierende Ordner mit demselben Namen gelöscht werden.
+</p>
+<p>
+Technisch gesehen verändert Mailboxer die Datei ~/Library/Mail/SmartMailboxes.plist, von der zuvor eine Sicherungskopie mit dem Namen ,SmartMailboxes.plist (Vor Mailboxer)‘ angelegt wird. In diese Datei werden die neu erzeugten Intelligenten Postfächer eingefügt. Und Mail wird falls nötig neu gestartet, damit die neu eingefügten Intelligenten Postfächer auch angezeigt werden. Sollte es nötig sein, die Darstellungsoptionen für die Intelligenten Postfächer zu verändern, helfen die Einstellungen weiter. 
+</p>
+<p class="thanks">
+Vielen Dank an Henrik Cederblad für Mailboxers Icon und an  Ronald Leroux für die Französische Lokalisierung.
+</p>
+<p>
+Enjoy.
+</p>
+<ul>
+<li><a href="http://earthlingsoft.net/Mailboxer">Mailboxer Webseite</a></li>
+<li><a href="http://earthlingsoft.net/">earthlingsoft Website</a></li>
+<li><a href="https://www.paypal.com/xclick/business=earthlingsoft%40earthlingsoft.net&amp;item_name=Mailboxer&amp;no_shipping=1&amp;cn=Comments&amp;tax=0&amp;currency_code=EUR">Spenden</a></li>
+<li><a href="mailto:earthlingsoft@earthlingsoft.net?subject=Mailboxer">E-Mail</a></li>
+<li><a href="http://earthlingsoft.net/ssp/blog/2007/04/mailboxer_v5#comments">Kommentieren [en]</a></li>
+</ul>
+
+
+<h3>Versionsgeschichte</h3>
+<dl>
+
+
+<dt>version 5 (2007-04-26)</dt>
+<dd> 
+<ul>
+<li>Deutsche Lokalisierung hinzugefügt. (Ältere Einträge nur auf Englisch)</li>
+<li>Added choice of Address Book group to be used.</li>
+<li>Added ability to enter the name for the smart folder Mailboxer creates.</li>
+<li>Added icon. Thanks to Henrik Cederblad for designing, making and contributing it</li>
+<li>Added French localisation. Thanks to Ronald Leroux for the contribution.</li>
+<li>All new and shiny window design.</li>
+<li>You can now set the name of the Smart Mailbox folder Mailboxer creates.</li>
+<li>Added Preferences for the contents and the display settings of the Smart Mailboxes.</li>
+<li>Mailboxer now tries to tell you exactly what clicking that button will do.</li>
+<li>Added ability to check for updates.</li>
+</ul>
+</dd>
+
+
+<dt>version 4 (2007-03-20)</dt>
+<dd>
+	fixed a problem with the handling of contacts whose name order has been manually adjusted in the AddressBook (thanks to Joseph W. Sullivan for pointing out the problem)
+</dd>
+<dt>version 3 (2006-03)</dt>
+<dd>	
+	<a href="http://earthlingsoft.net/ssp/blog/2006/03/mailboxer">initial release</a>	
+</dd>
+
+</dl>
+
+</div>
+</body>
+</html>

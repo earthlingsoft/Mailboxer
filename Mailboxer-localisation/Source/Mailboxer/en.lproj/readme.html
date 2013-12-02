@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Mailboxer</title>
+<style type="text/css">
+body { background:#eee; color:555; text-align:center; font-family:Georgia, Garamond,Palatino,Times,serif; }
+#main { max-width:35em; padding:3em 1em 1em 0;margin:auto; line-height:1.4em;}
+h1 { font-family:Zapfino; font-weight:normal;}
+.thanks { font-style: italic; }
+dl dt { font-style:italic; margin:2em 0em 0.5em 0em;}
+ul {list-style-type:none; padding:0px; }
+ul li, dl dd ul, dl dd {margin:0px; padding:0px;}
+ul.links li { display : inline;}
+ul.links li:before { content: '\002022'; margin:0em 0.3em; }
+ul.links li.i1:before { content:'';}
+a {text-decoration:none;}
+#oldversions  { display:none;}
+#oldversions:target + p { display:none;}
+#oldversions:target { display:block;} 
+h3 { margin:3em 0em 1em 0em;}
+</style>
+</head>
+<body>
+<div id="main">
+<h1>Mailboxer</h1>
+
+<p>
+	This little tool sets up a number of smart Mailboxes in Mail based on the contacts in your Address Book.
+</p>
+<p>
+It would seem natural for Mail to come with this feature built in. After all, the hard work such as providing a system-wide Address Book and a Smart Mailbox feature in Mail has already been done by Apple. But this feature does not exist and thus the hassle of having create Smart Mailboxes for <em>all</em> the present and past e-mail addresses of each person in the Address Book is left to the user. And Mailboxer steps in right there.
+</p>
+<p>
+Mailboxer’s main window lets you select whether you want a smart folder for each entry in your Address Book or whether you prefer limiting that to just the contacts of a single group of your Address Book. You can also choose a name for the Smart Folder Mailboxer inserts into your mailbox list. Please keep in mind that any existing Smart Folder of the same name will be deleted in the process.
+</p>
+<p>
+Technically, all Mailboxer does is that it edits Mail’s setup for Smart Mailboxes to include this extra folder with the Smart Mailboxes it creates. In order to do that Mail needs to be quit and re-launched. The file it edits is ~/Library/Mail/SmartMailboxes.plist and a backup copy named ‘SmartMailboxes (Pre Mailboxer).plist’ will be created in the same location before editing the file. If you require additional customisation of the contents or sort-order of the Smart Mailboxes, the Preferences window is your friend.
+</p>
+<p class="thanks">
+Thanks to Henrik Cederblad for Mailboxer's icon and to Ronald Leroux for the French localisation.
+</p>
+<p>
+Enjoy.
+</p>
+<ul>
+<li><a href="http://earthlingsoft.net/Mailboxer">Mailboxer website</a></li>
+<li><a href="http://earthlingsoft.net/">earthlingsoft website</a></li>
+<li><a href="https://www.paypal.com/xclick/business=earthlingsoft%40earthlingsoft.net&amp;item_name=Mailboxer&amp;no_shipping=1&amp;cn=Comments&amp;tax=0&amp;currency_code=EUR">Donate</a></li>
+<li><a href="mailto:earthlingsoft@earthlingsoft.net?subject=Mailboxer">Send E-Mail</a></li>
+<li><a href="http://earthlingsoft.net/ssp/blog/2007/04/mailboxer_v5#comments">Leave a Comment</a></li>
+</ul>
+
+
+<h3>Version History</h3>
+<dl>
+
+<dt>version 5 (2007-04-26)</dt>
+<dd> 
+<ul>
+<li>Added choice of Address Book group to be used.</li>
+<li>Added ability to enter the name for the smart folder Mailboxer creates.</li>
+<li>Added icon. Thanks to Henrik Cederblad for designing, making and contributing it</li>
+<li>Added French localisation. Thanks to Ronald Leroux for the contribution.</li>
+<li>Added German localisation.</li>
+<li>All new and shiny window design.</li>
+<li>You can now set the name of the Smart Mailbox folder Mailboxer creates.</li>
+<li>Added Preferences for the contents and the display settings of the Smart Mailboxes.</li>
+<li>Mailboxer now tries to tell you exactly what clicking that button will do.</li>
+<li>Added ability to check for updates.</li>
+</ul>
+</dd>
+
+
+<dt>version 4 (2007-03-20)</dt>
+<dd>
+	fixed a problem with the handling of contacts whose name order has been manually adjusted in the AddressBook (thanks to Joseph W. Sullivan for pointing out the problem)
+</dd>
+
+<dt>version 3 (2006-03)</dt>
+<dd>	
+	<a href="http://earthlingsoft.net/ssp/blog/2006/03/mailboxer">initial release</a>	
+</dd>
+
+</dl>
+
+</div>
+</body>
+</html>

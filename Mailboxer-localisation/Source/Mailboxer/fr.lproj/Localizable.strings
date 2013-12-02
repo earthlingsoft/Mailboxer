@@ -1,0 +1,67 @@
+﻿/* All Contacts */
+"All Contacts" = "Tous les contacts";
+
+/* Info text at the bottom of the window, three strings are inserted. The Address Book group name can also be the complete address book. */
+"Info Text. Command name: %@, Smart Mailbox name: %@, AddressBook Group name: %@, CCstatus: %@" = "La commande « %@ » mettra à jour vos réglages pour les boîtes aux lettres intelligentes de Mail en ajoutant ou substituant le dossier BAL intelligente « %@ ».
+
+Un nouveau dossier sera dans chaque boîte aux lettres intelligentes pour chaque contact dans %@. Ces boîtes aux lettres intelligentes contiendront tous les messages dans lesquels n'importe laquelle adresses du E-mail de ces contacts se produit comme %@.
+";
+
+
+/* Info text at the bottom of the window, six strings are inserted. The Address Book group name can also be the complete address book. */
+"Info Text. Command name: %@, Smart Mailbox name: %@, AddressBook Group name: %@, CCstatus: %@, Quitting Mail: %@ , Restarting Mail:%@" = "La commande « %1$@ »
+
+	%6$@
+	• Lira tous les Contacts dans %3$@
+	• Créera une boîte aux lettres intelligente avec le nom du contact pour chacun d'eux. Cette boîte aux lettres intelligente contiendra tous les messages où toutes les adresses électroniques de ce contact est un %5$@
+	• Placera tous ceux-ci dans une dossier intelligent de boîte aux lettres nommée « %2$@ »%7$@";
+
+
+/* bullet point that Mail will be quit  */
+". Quit Mail" = "• Quittera Mail";
+
+/* bullet point that Mail will be relaunched, should start with \n\t• */
+". Relaunch Mail" = "\n\t• Relancera Mail";
+
+/* the group '%@' of your address book */
+"the group '%@' of your address book" = "le groupe « %@ » de votre Carnet d'adresses";
+
+/* your address book */
+"your address book" = "votre Carnet d'adresses";
+/* sender, recipient or carbon copy recipient */
+"sender, recipient or carbon copy recipient" = "expéditeur, récipient ou récipient en copie conforme";
+
+/* sender or recipient */
+"sender or recipient" = "expéditeur or récipient";
+
+
+
+/* Mail will be quit and re-launched.
+	This string appears below the long text in the window if Mail is currently running */
+
+"Mail will be quit and re-launched." = "Mail sera quitté et relancé.";
+
+/* Create Smart Mailboxes */
+"Create Smart Mailboxes" = "Créer des BAL intelligentes";
+
+/* Quitting Mail */
+"Quitting Mail" = "À la fermeture de Mail";
+
+/* Processing AddressBook */
+"Processing Address Book" = "Traitement du Carnet d'adresses";
+
+/* Launching Mail */
+"Relaunching Mail" = "Relancement de Mail";
+
+
+
+
+/* Suffix for Backup file name */
+"Pre Mailboxer" = "(pré Mailboxer)";
+
+
+
+/* Items of the sort order menu in the Preferences */
+"Date Received" = "Date de réception";
+"Mailbox" = "BAL";
+"Subject" = "Objet";

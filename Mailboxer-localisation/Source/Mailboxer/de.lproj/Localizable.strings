@@ -1,0 +1,61 @@
+﻿/* All Contacts */
+"All Contacts" = "Alle Kontakte";
+
+/* Create Smart Mailboxes */
+"Create Smart Mailboxes" = "Intelligente Postfächer anlegen";
+
+/* Info text at the bottom of the window, four strings are inserted. The Address Book group name can also be the complete address book. */
+"Info Text. Command name: %@, Smart Mailbox name: %@, AddressBook Group name: %@, CCstatus: %@" = "Durch Klick auf den Knopf „%@“ werden die Einstellungen für Intelligente Postfächer in Mail aktualisiert, indem ein Ordner „%@“ für Intelligente Postfächer angelegt oder ersetzt wird.
+
+Dieser Ordner enthält für jeden Kontakt %@ ein Intelligentes Postfach. Jedes dieser Postfächer enthält alle Nachrichten, in denen eine E-Mail Adresse des zugehörigen Kontaktes als %@ vorkommt.
+";
+
+/* Info text at the bottom of the window, six strings are inserted. The Address Book group name can also be the complete address book. */
+"Info Text. Command name: %@, Smart Mailbox name: %@, AddressBook Group name: %@, CCstatus: %@, Quitting Mail: %@ , Restarting Mail:%@" = "Der Befehl „%1$@“
+
+	%6$@
+	• Erstellt einen Ordner für Intelligente Postfächer „%2$@“
+	• Nimmt alle Kontakte aus %3$@
+	• Erstellt für jeden davon ein Intelligentes Postfach mit dem Namen des Kontaks. Es enthält allen Nachrichten, die eine der E-Mail Adressen dieses Kontaktes als %5$@ haben%7$@";
+
+/* bullet point that Mail will be quit  */
+". Quit Mail" = "• Beendet Mail";
+
+/* bullet point that Mail will be relaunched, should start with \n\t• */
+". Relaunch Mail" = "\n\t• Startet Mail erneut";
+
+/* the group '%@' of your address book */
+"the group '%@' of your address book" =  "der Gruppe „%@“ im Adressbuch";
+
+/* your address book */
+"your address book" = "dem Adressbuch";
+
+/* sender, recipient or carbon copy recipient */
+"sender, recipient or carbon copy recipient" = "Absender, Empfänger, oder Kopieempfänger";
+
+/* sender or recipient */
+"sender or recipient" = "Absender oder Empfänger";
+
+/* Mail will be quit and re-launched. */
+"Mail will be quit and re-launched." = "Mail wird beendet und neu gestartet.";
+
+
+/* Launching Mail */
+"Relaunching Mail" = "Starte Mail";
+
+/* Suffix for Backup file name */
+"Pre Mailboxer" = "(vor Mailboxer)";
+
+/* Processing AddressBook */
+"Processing Address Book" = "Bearbeite Adressbuch";
+
+/* Quitting Mail */
+"Quitting Mail" = "Beende Mail";
+
+
+
+
+/* Items of the sort order menu in the Preferences */
+"Date Received" = "Empfangen";
+"Mailbox" = "Postfach";
+"Subject" = "Betreff";
